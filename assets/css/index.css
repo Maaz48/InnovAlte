@@ -10,36 +10,76 @@ body {
   color: white;
 }
 
+/* ////////////////////// TUBELIGHT EFFECT /////////// */
+.tubeLightEffect {
+  position: relative;
+  font-size: 5em;
+  letter-spacing: 15px;
+  color: orangered;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+  line-height: 0.7em;
+  outline: none;
+  animation: text 3s linear infinite;
+  display: flex;
+  justify-content: flex-end !important;
+}
+::selection {
+  color: currentColor;
+  background-color: orangered;
+}
+@keyframes text {
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: orangered;
+    text-shadow: 0 0 5px orangered;
+  }
+  18.1%,
+  20.1%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: #ffffff;
+    text-shadow: 0 0 10px orangered, 0 0 20px orangered, 0 0 40px orangered,
+      0 0 80px orangered, 0 0 160px orangered;
+  }
+}
+
 /* ///////////////// STROKE TEXT ///////// */
 svg text {
   font-size: 3.5rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 5px;
-  fill: linear-gradient(
-    to left bottom,
-    #f86bc6,
-    #b953a5,
-    #7e3c81,
-    #4a255a,
-    #1e0e32
-  );
-  stroke: #f86bc6;
-  stroke-width: 2px;
-  animation: animated-stroke 5s, gradientStroke 5s;
+  fill: white;
+  stroke: orangered;
+  stroke-width: 3px;
+  animation: animated-stroke 7s, gradientStroke 10s infinite;
   text-anchor: middle;
   dominant-baseline: middle;
 }
 
 @keyframes gradientStroke {
   0% {
-    background: linear-gradient(45deg, #f86bc6, #1e0e32);
+    color: #1e0e32;
   }
   50% {
-    background: linear-gradient(45deg, #1e0e32, #f86bc6);
+    color: #f05724;
   }
   100% {
-    background: linear-gradient(45deg, #f86bc6, #1e0e32);
+    color: orange;
   }
 }
 @keyframes animated-stroke {
@@ -74,24 +114,24 @@ svg text {
 .section:nth-child(odd) {
   /* background: linear-gradient(135deg, #ffcc00, #f9e75e); */
   background-image: linear-gradient(
-    to left bottom,
-    #f86bc6,
-    #b953a5,
-    #7e3c81,
-    #4a255a,
-    #1e0e32
+    to right bottom,
+    #ffb900,
+    #f7931e,
+    #f05724,
+    #d3363a,
+    #111111
   );
 }
 
 .section:nth-child(even) {
   /* background: linear-gradient(135deg, #f9e75e, #ffcc00); */
   background-image: linear-gradient(
-    to left bottom,
-    #f86bc6,
-    #b953a5,
-    #7e3c81,
-    #4a255a,
-    #1e0e32
+    to right bottom,
+    #ffb900,
+    #f7931e,
+    #f05724,
+    #d3363a,
+    #111111
   );
 }
 
@@ -100,9 +140,14 @@ svg text {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
   align-items: center;
+  justify-content: center; */
+  /* display: flex; */
+  /* justify-content: space-between; */
+  min-height: 80px;
+  /* flex-direction: column-reverse; */
+  /* align-items: center; */
   width: 90%;
   max-width: 1200px;
   backdrop-filter: blur(10px);
@@ -132,12 +177,12 @@ svg text {
 }
 
 .background-text {
-  font-size: 15vw;
-  color: rgba(0, 0, 0, 0.221);
+  font-size: 10vw;
+  color: rgba(255, 255, 255, 0.311);
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(-20deg);
+  transform: translate(-50%, -50%) rotate(-20deg) ;
   white-space: nowrap;
   display: inline-block;
   z-index: 1;
@@ -177,12 +222,12 @@ p {
 .footer {
   /* background: linear-gradient(135deg, #ffcc00, #f9e75e); */
   background-image: linear-gradient(
-    to left bottom,
-    #f86bc6,
-    #b953a5,
-    #7e3c81,
-    #4a255a,
-    #1e0e32
+    to right bottom,
+    #ffb900,
+    #f7931e,
+    #f05724,
+    #d3363a,
+    #111111
   );
   padding: 40px 20px;
   color: white;
@@ -389,13 +434,14 @@ p {
 }
 
 .backgroundEffectSec2 {
-  background-image: url("../images/vecteezy_abstract-lines-background_21911753.png");
+  background-image: url("../images/kisspng-petal-close-up-fireworks-5a90ea6a3725d5.4944212715194466342259.png");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: left center;
   position: absolute;
   top: 0px;
   left: 0px;
-  transform: rotate(180deg);
+  /* transform: rotate(180deg); */
   width: 100%;
   height: 100%;
   opacity: 0.4;
@@ -418,6 +464,11 @@ p {
   align-items: center;
   flex-direction: column;
   padding: 0px 20px;
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  background-color: rgba(214, 148, 25, 0.76);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 /* /////////////////////// TIMELINE /////////////// */
@@ -497,7 +548,7 @@ img {
 .ag-timeline_line-progress {
   width: 100%;
   height: 20%;
-  background-color: #f86bc6;
+  background-color: #F05724;
 }
 
 .ag-timeline-card_box {
@@ -517,7 +568,7 @@ img {
   height: 50px;
   line-height: 50px;
   width: 50px;
-  border: 3px solid #f86bc6;
+  border: 3px solid #F05724;
   background-color: #1d1d1b;
   display: flex;
   justify-content: center;
@@ -533,7 +584,7 @@ img {
 }
 .js-ag-active .ag-timeline-card_point {
   color: #1d1d1b;
-  background-color: #f86bc6;
+  background-color: #F05724;
 }
 .ag-timeline-card_meta-box {
   display: inline-block;
@@ -745,6 +796,24 @@ img {
   align-items: center;
   padding: 0px 20px;
   gap: 20px;
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  background-color: rgba(214, 148, 25, 0.76);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+@media screen and (max-width: 576px) {
+  .cardExpert {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0px;
+    text-align: center;
+  }
+  .cardImg {
+    height: 100px;
+    width: 100px;
+  }
 }
 
 .cardImg {
@@ -757,23 +826,23 @@ img {
   position: absolute;
   top: 0px;
   left: 0px;
-  background-image: url("../images/kisspng-purple-graphic-design-purple-line-5aa351619eed96.089446151520652641651.png");
+  background-image: url("../images/6b0c8d51ffeb4b8added7d7e4a2c3e7f.png");
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
   height: 100%;
   width: 100%;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 .sectionthreebgEffect2 {
   position: absolute;
   top: 0px;
   left: 0px;
-  background-image: url("../images/554b2143290f452d540f30d99f930781.png");
+  background-image: url("../images/kisspng-petal-close-up-fireworks-5a90ea6a3725d5.4944212715194466342259.png");
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   height: 100%;
   width: 100%;
   opacity: 0.3;
   transform: rotate(180deg);
 }
-
