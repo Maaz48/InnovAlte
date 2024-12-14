@@ -64,7 +64,7 @@ svg text {
   text-transform: uppercase;
   letter-spacing: 5px;
   fill: white;
-  stroke: orangered;
+  stroke: #36361a;
   stroke-width: 3px;
   animation: animated-stroke 7s, gradientStroke 10s infinite;
   text-anchor: middle;
@@ -114,24 +114,38 @@ svg text {
 .section:nth-child(odd) {
   /* background: linear-gradient(135deg, #ffcc00, #f9e75e); */
   background-image: linear-gradient(
-    to right bottom,
-    #ffb900,
-    #f7931e,
-    #f05724,
-    #d3363a,
-    #111111
+    to top,
+    #998260,
+    #977f59,
+    #957b52,
+    #92784b,
+    #907544,
+    #876f3e,
+    #7d6837,
+    #746231,
+    #63572b,
+    #534c25,
+    #44411f,
+    #36361a
   );
 }
 
 .section:nth-child(even) {
   /* background: linear-gradient(135deg, #f9e75e, #ffcc00); */
   background-image: linear-gradient(
-    to right bottom,
-    #ffb900,
-    #f7931e,
-    #f05724,
-    #d3363a,
-    #111111
+    to top,
+    #998260,
+    #977f59,
+    #957b52,
+    #92784b,
+    #907544,
+    #876f3e,
+    #7d6837,
+    #746231,
+    #63572b,
+    #534c25,
+    #44411f,
+    #36361a
   );
 }
 
@@ -182,7 +196,7 @@ svg text {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(-20deg) ;
+  transform: translate(-50%, -50%) rotate(-20deg);
   white-space: nowrap;
   display: inline-block;
   z-index: 1;
@@ -222,12 +236,19 @@ p {
 .footer {
   /* background: linear-gradient(135deg, #ffcc00, #f9e75e); */
   background-image: linear-gradient(
-    to right bottom,
-    #ffb900,
-    #f7931e,
-    #f05724,
-    #d3363a,
-    #111111
+    to top,
+    #998260,
+    #977f59,
+    #957b52,
+    #92784b,
+    #907544,
+    #876f3e,
+    #7d6837,
+    #746231,
+    #63572b,
+    #534c25,
+    #44411f,
+    #36361a
   );
   padding: 40px 20px;
   color: white;
@@ -464,9 +485,11 @@ p {
   align-items: center;
   flex-direction: column;
   padding: 0px 20px;
-  backdrop-filter: blur(25px) saturate(200%);
-  -webkit-backdrop-filter: blur(25px) saturate(200%);
-  background-color: rgba(214, 148, 25, 0.76);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  background-color: rgba(54, 54, 26, 0.79);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
@@ -548,7 +571,7 @@ img {
 .ag-timeline_line-progress {
   width: 100%;
   height: 20%;
-  background-color: #F05724;
+  background-color: #36361a;
 }
 
 .ag-timeline-card_box {
@@ -568,8 +591,8 @@ img {
   height: 50px;
   line-height: 50px;
   width: 50px;
-  border: 3px solid #F05724;
-  background-color: #1d1d1b;
+  border: 3px solid #36361a;
+  background-color: #36361a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -583,8 +606,8 @@ img {
   border-radius: 50%;
 }
 .js-ag-active .ag-timeline-card_point {
-  color: #1d1d1b;
-  background-color: #F05724;
+  color: #8c713a;
+  background-color: #36361a;
 }
 .ag-timeline-card_meta-box {
   display: inline-block;
@@ -796,9 +819,11 @@ img {
   align-items: center;
   padding: 0px 20px;
   gap: 20px;
-  backdrop-filter: blur(25px) saturate(200%);
-  -webkit-backdrop-filter: blur(25px) saturate(200%);
-  background-color: rgba(214, 148, 25, 0.76);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  background-color: rgba(54, 54, 26, 0.79);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
@@ -826,13 +851,27 @@ img {
   position: absolute;
   top: 0px;
   left: 0px;
-  background-image: url("../images/6b0c8d51ffeb4b8added7d7e4a2c3e7f.png");
+  background-image: url("../images/vecteezy_wave-line-art-yellow-pattern-design_35154977.png");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  background-size: cover;
+  background-position: top top;
+  transform: rotate(180deg);
   height: 100%;
   width: 100%;
-  opacity: 0.8;
+  opacity: 0.4;
+}
+.sectionthreebgEffectzxc {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-image: url("../images/vecteezy_wave-line-art-yellow-pattern-design_35154977.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: top top; */
+  transform: rotate(360deg);
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
 }
 .sectionthreebgEffect2 {
   position: absolute;
